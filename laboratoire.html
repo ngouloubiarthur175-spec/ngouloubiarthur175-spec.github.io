@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title data-i18n="projects.openLab">Laboratoire</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <div id="main"><div class="inner">
+        <header id="header">
+          <span class="brand"><a href="index.html"><strong>Arthur</strong> Ngouloubi</a></span>
+        </header>
+
+        <section id="lab-list">
+          <header class="main"><h2 data-i18n="projects.openLab">Laboratoire</h2></header>
+          <div class="box">
+            <p data-i18n="projects.intro">Liste des laboratoires. Cliquez sur "Voir le PDF" pour ouvrir le rapport en page.</p>
+            <ul style="list-style:none;padding:0;margin:0;">
+              <li style="margin:12px 0;">
+                <strong data-i18n="projects.lab1">Laboratoire 1</strong>
+                <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;">
+                  <button class="btn" data-action="embed-pdf" data-pdf="PROJET/PROJET2/PROJET.pdf" data-i18n="projects.viewPdf">Voir le PDF</button>
+                  <a class="btn" href="PROJET/PROJET2/PROJET.pdf" target="_blank" data-i18n="projects.openNewTab">Ouvrir dans un nouvel onglet</a>
+                </div>
+              </li>
+              <li style="margin:12px 0;" data-i18n="projects.lab2">Laboratoire 2 — À venir</li>
+              <li style="margin:12px 0;" data-i18n="projects.lab3">Laboratoire 3 — À venir</li>
+              <li style="margin:12px 0;" data-i18n="projects.lab4">Laboratoire 4 — À venir</li>
+              <li style="margin:12px 0;" data-i18n="projects.lab5">Laboratoire 5 — À venir</li>
+            </ul>
+            <div id="pdfContainer" style="margin-top:18px;"></div>
+          </div>
+        </section>
+
+      </div></div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="script.js"></script>
+  </body>
+</html>

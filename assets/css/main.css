@@ -96,28 +96,120 @@ header a:hover {
 
 /* Navigation */
 nav {
-  background: #000000; /* Fond noir */
+  background: transparent;
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 10px 20px;
 }
+
+/* Header layout and brand */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.profile-wrap { text-align: center; margin-bottom: 1.5em; }
+.profile-image { width: min(380px, 46vw); max-width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 50% / 35%; box-shadow: 0 4px 24px rgba(60,0,80,0.13); display:block; margin: 0 auto; }
+.site-header .brand {
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+  cursor: default;
+  user-select: none;
+}
+/* Ensure brand text (Arthur Ngouloubi) is white in header */
+#header .brand, #header .brand strong {
+  color: var(--secondary-color);
+}
+/* Ensure strong inside brand matches the brand color */
+.site-header .brand strong {
+  color: var(--secondary-color);
+}
+
+/* Language menu styles */
+.lang {
+  position: relative;
+}
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  background: var(--primary-color);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 8px;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  z-index: 1200;
+}
+.lang-menu[hidden] { display: none; }
+.lang-menu li { margin: 0; }
+.lang-menu button {
+  background: transparent;
+  border: 0;
+  color: var(--secondary-color);
+  padding: 6px 10px;
+  width: 100%;
+  text-align: left;
+}
+.lang-menu button:hover { background: rgba(255,255,255,0.03); }
+
+/* PDF container */
+#pdfContainer {
+  margin-top: 1rem;
+}
+
+.pdf-frame-wrap { position: relative; }
+.pdf-frame-wrap .close-pdf {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pdf-frame-wrap iframe { width: 100%; height: 70vh; border: 0; }
+@media screen and (max-width: 600px) { .pdf-frame-wrap iframe { height: 55vh; } }
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
+nav ul li { white-space: nowrap; }
 nav ul li a {
   color: #ffffff; /* Texte blanc */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 8px 12px;
+  display: inline-block;
+  margin-right: 6px;
 }
 nav ul li a:hover {
   color: #000000; /* Texte noir survol */
   background: #ffffff; /* Fond blanc survol */
 }
+
+/* Profile wrap fallback: show background image oval if <img> fails */
+.profile-wrap { width: min(420px, 46vw); margin: 0 auto 1.5em; border-radius: 50%/35%; overflow: hidden; background-image: url('../images/image.png'); background-size: cover; background-position: center; }
+.profile-wrap img { display:block; width:100%; height:auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 50%/35%; }
 
 /* Sections */
 section {
@@ -160,6 +252,16 @@ button {
 button:hover {
   background-color: var(--accent-color);
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 600px) {
+  section { padding: 20px 12px; margin: 30px 12px; }
+  nav ul { flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+  header h1 { font-size: 1.6rem; }
+  .profile-image { width: min(200px, 40vw); }
+  .qr-code { width: 180px; margin: 10px auto; display:block; }
+  .project-nav { justify-content: center; }
+  .project-categories { padding: 0 6px; }
 }
 
 /* Pied de page */

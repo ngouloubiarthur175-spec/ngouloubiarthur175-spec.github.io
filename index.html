@@ -1,109 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="meta.title">Arthur Ngouloubi — Cybersecurity Portfolio</title>
-    <meta name="description" content="Portfolio de cybersécurité d'Arthur Ngouloubi, étudiant passionné et professionnel en devenir." data-i18n="meta.description">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#welcome" data-i18n="nav.welcome">Accueil</a></li>
-            <li><a href="#labs" data-i18n="nav.labs">Laboratoire et Certification</a></li>
-            <li><a href="#articles" data-i18n="nav.articles">Mes Articles</a></li>
-            <li><a href="#education" data-i18n="nav.education">Éducation</a></li>
-            <li><a href="#whoiam" data-i18n="nav.whoiam">Qui Je Suis</a></li>
-            <li><a href="#experience" data-i18n="nav.work">Expérience Professionnelle</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-            <li class="language-selector">
-                <button class="dropdown-button" aria-haspopup="listbox" data-i18n="nav.language">🌍 Langue</button>
-                <div class="dropdown-content" role="menu">
-                    <a href="#" id="lang-fr" data-i18n="nav.language.fr">Français</a>
-                    <a href="#" id="lang-en" data-i18n="nav.language.en">English</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title data-i18n="meta.title">Arthur Ngouloubi — Étudiant en Cybersécurité</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
 
-    <!-- Section: Welcome -->
-    <header id="welcome">
-        <h1 data-i18n="welcome.title">Arthur Ngouloubi — Étudiant en Cybersécurité</h1>
-        <p data-i18n="welcome.subtitle">Explorateur passionné du monde de la cybersécurité.</p>
-        <p data-i18n="welcome.paragraph">Je construis un profil solide en cybersécurité : sécurité réseau, cryptographie, détection d’intrusions et automatisation par IA. Mon objectif : délivrer des solutions claires, fiables et documentées.</p>
-        <img src="https://via.placeholder.com/300x300?text=Cybersecurity+Profile" alt="Photo de profil d'Arthur Ngouloubi" class="profile-pic">
-    </header>
+    <div id="wrapper">
+      <div id="main"><div class="inner">
 
-    <!-- Section: Laboratoire et Certification -->
-    <section id="labs">
-        <h2 data-i18n="labs.title">Laboratoire et Certification</h2>
-        <div class="labs">
-            <button data-i18n="labs.project1" onclick="window.open('https://tonlien.externe/', '_blank', 'noopener')">Projet Principal (en cours)</button>
-            <button data-i18n="labs.project2" onclick="window.open('https://tonlien.externe/', '_blank', 'noopener')">Détection, Surveillance et Réponse</button>
-            <button data-i18n="labs.project3" onclick="window.open('https://tonlien.externe/', '_blank', 'noopener')">Sécurité Opérationnelle et Infrastructure</button>
-        </div>
-        <a href="https://tonrepo-ctf.github.io/" target="_blank" rel="noopener" data-i18n="labs.ctfWriteups">Rapports de CTF</a>
-    </section>
+        <!-- Header -->
+        <header id="header">
+          <span class="brand"><strong>Arthur</strong> Ngouloubi</span>
+          <nav id="site-nav" class="nav-menu">
+            <ul>
+              <li><a href="#welcome" data-i18n="nav.welcome">Accueil</a></li>
+              <li><a href="#projects" data-i18n="nav.labs">Laboratoire et Certification</a></li>
+              <li><a href="#articles" data-i18n="nav.articles">Mes Articles</a></li>
+              <li><a href="#education" data-i18n="nav.education">Éducation</a></li>
+              <li><a href="#whoiam" data-i18n="nav.whoiam">Qui suis‑je ?</a></li>
+              <li><a href="#experience" data-i18n="nav.work">Expérience Professionnelle</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+              <li class="lang" id="langItem">
+                <button id="translateBtn" class="lang-btn" aria-haspopup="true" aria-expanded="false" data-i18n="nav.translate">Traduire ▾</button>
+                <ul id="langMenu" class="lang-menu" role="menu" hidden>
+                  <li role="menuitem"><button data-lang="fr">Français</button></li>
+                  <li role="menuitem"><button data-lang="en">English</button></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-    <!-- Section: My Articles -->
-    <section id="articles">
-        <h2 data-i18n="articles.title">Mes Articles</h2>
-        <ul>
-            <li><a href="https://notion.so/article1" target="_blank" rel="noopener" data-i18n="articles.article1">Article 1</a></li>
-            <li><a href="https://notion.so/article2" target="_blank" rel="noopener" data-i18n="articles.article2">Article 2</a></li>
-        </ul>
-    </section>
+        <!-- Hero -->
+        <section id="welcome" class="hero">
+          <header class="main">
+            <h1 data-i18n="welcome.title">Arthur Ngouloubi — Étudiant en Cybersécurité</h1>
+            <p class="tag" data-i18n="welcome.subtitle">Explorateur passionné du monde de la cybersécurité.</p>
+          </header>
 
-    <!-- Section: Education -->
-    <section id="education">
-        <h2 data-i18n="education.title">Éducation</h2>
-        <p data-i18n="education.description">Formation en cybersécurité à [Établissement].</p>
-        <div class="certifications">
-            <a href="https://certificat1.com" target="_blank" rel="noopener"><img src="https://via.placeholder.com/150?text=Cert1" alt="Certification 1"></a>
-            <a href="https://certificat2.com" target="_blank" rel="noopener"><img src="https://via.placeholder.com/150?text=Cert2" alt="Certification 2"></a>
-        </div>
-    </section>
+          <div class="profile-wrap">
+            <img class="profile-image" src="images/image.png" alt="NOULOUBI-ARTHUR PORTRAIT" />
+          </div>
 
-    <!-- Section: Who I Am -->
-    <section id="whoiam">
-        <h2 data-i18n="whoiam.title">Qui Je Suis</h2>
-        <p data-i18n="whoiam.description">Je suis Arthur Ngouloubi, un étudiant passionné par la cybersécurité, toujours curieux et prêt à relever de nouveaux défis.</p>
-    </section>
+            <p class="lead" data-i18n="welcome.paragraph">Je construis un profil solide en cybersécurité : sécurité réseau, cryptographie, détection d’intrusions et automatisation par IA. Mon objectif : délivrer des solutions claires, fiables et documentées.</p>
+          </section>
 
-    <!-- Section: Work Experience -->
-    <section id="experience">
-        <h2 data-i18n="experience.title">Expérience Professionnelle</h2>
-        <p data-i18n="experience.description">(example) Cybersecurity Intern — Example Company</p>
-    </section>
+          <!-- Who I am (moved right after welcome as requested) -->
+          <section id="whoiam">
+            <h2 data-i18n="whoiam.title">Qui Je Suis</h2>
+            <p data-i18n="whoiam.description">Je suis Arthur Ngouloubi, un étudiant passionné par la cybersécurité, toujours curieux et prêt à relever de nouveaux défis.</p>
+          </section>
 
-    <!-- Section: QR Code -->
-    <section id="qrcode">
-        <h2 data-i18n="qrcode.title">Partager ce site</h2>
-        <p data-i18n="qrcode.description">Scannez le QR code ci-dessous pour partager ce site :</p>
-        <img src="assets/images/qrcode.png" alt="QR code pour partager le site" class="qr-code">
-    </section>
+          <!-- Projet Professionnelle (main summary) -->
+          <section id="projects">
+            <header class="main"><h2 data-i18n="projects.title">Projet Professionnelle</h2></header>
+            <div class="box">
+              <p data-i18n="projects.intro">Projets professionnels en cours — accédez au laboratoire pour consulter les rapports et PDF.</p>
+              <p style="margin-top:12px;"><a class="btn" href="laboratoire.html" data-i18n="projects.openLab">Laboratoire</a></p>
+            </div>
+          </section>
 
-    <!-- Section: Cybersécurité -->
-    <section id="cybersecurity">
-        <h2 data-i18n="cybersecurity.title">Images sur la Cybersécurité</h2>
-        <div class="cybersecurity-images">
-            <img src="https://via.placeholder.com/200" alt="Image cybersécurité 1">
-            <img src="https://via.placeholder.com/200" alt="Image cybersécurité 2">
-            <img src="https://via.placeholder.com/200" alt="Image cybersécurité 3">
-        </div>
-    </section>
+          <!-- Articles -->
+          <section id="articles">
+            <h2 data-i18n="articles.title">Mes Articles</h2>
+            <ul>
+              <li data-i18n="articles.article1">Article 1</li>
+              <li data-i18n="articles.article2">Article 2</li>
+            </ul>
+          </section>
 
-    <!-- Section: Contact -->
-    <footer id="contact">
-        <h2 data-i18n="contact.title">Contact</h2>
-        <p>Email: <a href="mailto:arthur.ngouloubi@example.com" data-i18n="contact.email">arthur.ngouloubi@example.com</a></p>
-        <p><a href="https://github.com/arthur-ngouloubi" target="_blank" rel="noopener" data-i18n="contact.github">GitHub</a> | <a href="https://linkedin.com/in/arthur-ngouloubi" target="_blank" rel="noopener" data-i18n="contact.linkedin">LinkedIn</a></p>
-        <a href="https://linktree.com/arthur-ngouloubi" target="_blank" rel="noopener"><img src="images/qr.png" alt="QR code vers Linktree"></a>
-    </footer>
+          <!-- Education -->
+          <section id="education">
+            <h2 data-i18n="education.title">Éducation</h2>
+            <p data-i18n="education.description">Formation en cybersécurité à [Établissement].</p>
+          </section>
 
+        <!-- Certification -->
+        <section id="certification">
+          <h2 data-i18n="certification.title">Certification</h2>
+          <p data-i18n="certification.intro">Petite introduction aux certifications. (Texte temporaire — à remplacer.)</p>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+          <h2 data-i18n="experience.title">Expérience Professionnelle</h2>
+          <p data-i18n="experience.description">(example) Cybersecurity Intern — Example Company</p>
+        </section>
+
+        <!-- Contact (with QR linking to Linktree) -->
+        <section id="contact">
+          <h2 data-i18n="contact.title">Contact</h2>
+          <p><strong>Email:</strong> <a href="mailto:arthur.ngouloubi@example.com">arthur.ngouloubi@example.com</a></p>
+          <p><a href="https://github.com/ngouloubiarthur-spec" target="_blank" rel="noopener">GitHub</a> | <a href="#" id="linkedinLink">LinkedIn</a></p>
+          <div style="margin-top:10px;">
+            <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;">
+              <div style="min-width:160px;">
+                <h4 data-i18n="qrcode.site.title">QR du site</h4>
+                <p data-i18n="qrcode.site.description">Scannez pour ouvrir le site :</p>
+                <a id="qrSiteLink" href="https://ngouloubiarthur175-spec.github.io/#apropos" target="_blank" rel="noopener" data-qr-target="https://ngouloubiarthur175-spec.github.io/#apropos">
+                  <img id="siteQrSite" class="qr-code" src="" alt="QR code site" style="width:120px;height:120px;border-radius:8px;" />
+                </a>
+                <div style="font-size:0.88rem;color:rgba(255,255,255,0.9);margin-top:6px">Site: <a href="https://ngouloubiarthur175-spec.github.io/#apropos" target="_blank" rel="noopener">ngouloubiarthur175-spec.github.io</a></div>
+              </div>
+
+              <div style="min-width:160px;">
+                <h4 data-i18n="qrcode.linktree.title">QR code vers Linktree</h4>
+                <p data-i18n="qrcode.linktree.description">Scannez pour ouvrir mon Linktree :</p>
+                <a id="qrLink" href="https://linktr.ee/arthurngouloubi" target="_blank" rel="noopener" data-qr-target="https://linktr.ee/arthurngouloubi">
+                  <img id="siteQrLinktree" class="qr-code" src="" alt="QR code Linktree" style="width:120px;height:120px;border-radius:8px;" />
+                </a>
+                <div style="font-size:0.88rem;color:rgba(255,255,255,0.9);margin-top:6px">Linktree: <a href="https://linktr.ee/arthurngouloubi" target="_blank" rel="noopener">linktr.ee/arthurngouloubi</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/i18n.js" defer></script>
-</body>
+    <script src="script.js"></script>
+
+  </body>
 </html>
+

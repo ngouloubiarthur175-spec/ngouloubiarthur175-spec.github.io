@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="projects.title">Projets</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav id="site-nav" class="nav-menu">
+            <ul>
+                <li><a href="#welcome" data-i18n="nav.welcome">Accueil</a></li>
+                <li><a href="#whoiam" data-i18n="nav.whoiam">Qui Je Suis ?</a></li>
+                <li><a href="#projects" data-i18n="nav.labs">Projet</a></li>
+                <li><a href="#articles" data-i18n="nav.articles">Mes Articles</a></li>
+                <li><a href="#education" data-i18n="nav.education">Éducation</a></li>
+                <li><a href="#certification" data-i18n="nav.certification">Certification</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="lang" id="langItem">
+                    <button id="translateBtn" class="lang-btn" aria-haspopup="true" aria-expanded="false" data-i18n="nav.translate">Traduire ▾</button>
+                    <ul id="langMenu" class="lang-menu" role="menu" hidden>
+                        <li role="menuitem"><button data-lang="fr">Français</button></li>
+                        <li role="menuitem"><button data-lang="en">English</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width:900px;margin:3rem auto;padding:0 20px;">
+        <h1 data-i18n="projects.title">Projets</h1>
+        <p data-i18n="projects.intro">Liste des projets disponibles. Cliquez pour ouvrir un PDF.</p>
+        <div class="project-nav" style="display:flex;gap:12px;margin:10px 0;flex-wrap:wrap;">
+            <button data-i18n="projects.labOption" onclick="location.hash='#lab-list'">Laboratoire</button>
+            <button data-i18n="projects.personalOption" onclick="location.hash='#personal-projects'">Projets perso</button>
+        </div>
+        <div class="project-categories" style="display:flex;flex-direction:column;gap:16px;">
+            <section id="lab-list">
+                <h2>Projet</h2>
+                <div class="lab-items" style="display:flex;flex-direction:column;gap:8px;">
+                    <div>
+                        <button data-action="embed-pdf" data-pdf="PROJET/PROJET2/PROJET.pdf" data-i18n="projects.viewPdf">Projet 1 — Voir le PDF</button>
+                        <button onclick="window.open('PROJET/PROJET2/PROJET.pdf','_blank')" data-i18n="projects.openNewTab">Ouvrir dans un nouvel onglet</button>
+                    </div>
+                    <div>
+                        <button disabled title="À venir">Projet 2 (à venir)</button>
+                    </div>
+                    <div>
+                        <button disabled title="À venir">Projet 3 (à venir)</button>
+                    </div>
+                    <div>
+                        <button disabled title="À venir">Projet 4 (à venir)</button>
+                    </div>
+                    <div>
+                        <button disabled title="À venir">Projet 5 (à venir)</button>
+                    </div>
+                </div>
+            </section>
+            <section id="personal-projects">
+                <h2>Laboratoire perso</h2>
+                <p>Pas encore de laboratoires personnels — à venir.</p>
+            </section>
+        </div>
+        <div id="pdfContainer" style="max-width:900px;margin:1.5rem auto;padding:0 10px;"></div>
+    </main>
+
+    <script src="assets/js/i18n.js" defer></script>
+</body>
+</html>
